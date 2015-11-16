@@ -15,8 +15,8 @@ install:
   - 7z x go%GOVERSION%.windows-amd64.zip -y -oC:\ > NUL
   - go version
   - go env
-  - go get -u github.com/nsf/gocode
   - mkdir c:\gopath
+  - go get -u github.com/nsf/gocode
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%
