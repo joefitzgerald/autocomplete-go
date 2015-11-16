@@ -1,0 +1,34 @@
+language: objective-c
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+sudo: required
+
+os:
+  - linux
+  - osx
+
+language: go
+
+go:
+  - 1.5.1
+
+env:
+  global:
+    - APM_TEST_PACKAGES="environment go-config"
+
+  matrix:
+    - ATOM_CHANNEL=stable
+    - ATOM_CHANNEL=beta
+
+script:
+  - pushd $TRAVIS_BUILD_DIR
+  - export DISPLAY=":99"
+  - go get -u github.com/nsf/gocode
+  - ./build-package.sh
+
+git:
+  depth: 10
