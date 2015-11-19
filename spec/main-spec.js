@@ -11,6 +11,10 @@ describe('autocomplete-go', () => {
         mainModule = pack.mainModule
       })
     })
+
+    waitsFor(() => {
+      return mainModule.getGoconfig()
+    })
   })
 
   describe('when the autocomplete-go package is activated', () => {

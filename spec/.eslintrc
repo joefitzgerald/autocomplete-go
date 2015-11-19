@@ -4,5 +4,6 @@
   },
   "globals": {
     "waitsForPromise": true,
+    "advanceClock": true
   }
 }
