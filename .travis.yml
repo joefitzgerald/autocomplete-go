@@ -25,10 +25,8 @@ env:
     - ATOM_CHANNEL=beta
 
 script:
-  - pushd $TRAVIS_BUILD_DIR
-  - export DISPLAY=":99"
   - go get -u github.com/nsf/gocode
-  - ./build-package.sh
+  - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
 
 git:
   depth: 10
