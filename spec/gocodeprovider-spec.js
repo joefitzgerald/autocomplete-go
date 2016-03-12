@@ -260,6 +260,7 @@ describe('gocodeprovider', () => {
         expect(provider).toBeDefined()
         expect(provider.getSuggestions).not.toHaveBeenCalled()
         expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
+          // provider.completionMode = 'Arg name and type'
         editor.setCursorScreenPosition([13, 0])
         editor.insertText('\tSayHello("world")  ')
         suggestions = null
@@ -291,7 +292,7 @@ describe('gocodeprovider', () => {
         expect(suggestions.length).toBeGreaterThan(0)
         expect(suggestions[0]).toBeTruthy()
         expect(suggestions[0].displayText).toBe('Fatal(v ...interface{\\})')
-        expect(suggestions[0].snippet).toBe('Fatal(${1:v})')
+        expect(suggestions[0].snippet).toBe('Fatal(${1:v ...interface{\\}})')
         expect(suggestions[0].replacementPrefix).toBe('')
         expect(suggestions[0].type).toBe('function')
         expect(suggestions[0].leftLabel).toBe('')
@@ -304,6 +305,7 @@ describe('gocodeprovider', () => {
         expect(provider).toBeDefined()
         expect(provider.getSuggestions).not.toHaveBeenCalled()
         expect(editorView.querySelector('.autocomplete-plus')).not.toExist()
+        provider.completionMode = 'None'
         editor.setCursorScreenPosition([13, 0])
         editor.insertText('\tSayHello("world")\t')
         suggestions = null
@@ -335,7 +337,7 @@ describe('gocodeprovider', () => {
         expect(suggestions.length).toBeGreaterThan(0)
         expect(suggestions[0]).toBeTruthy()
         expect(suggestions[0].displayText).toBe('Fatal(v ...interface{\\})')
-        expect(suggestions[0].snippet).toBe('Fatal(${1:v})')
+        expect(suggestions[0].snippet).toBe('Fatal(')
         expect(suggestions[0].replacementPrefix).toBe('')
         expect(suggestions[0].type).toBe('function')
         expect(suggestions[0].leftLabel).toBe('')
