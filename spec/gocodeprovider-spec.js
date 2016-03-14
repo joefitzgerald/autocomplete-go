@@ -1,4 +1,5 @@
 'use babel'
+/* eslint-env jasmine */
 
 import path from 'path'
 

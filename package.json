@@ -21,14 +21,15 @@
     "url": "https://github.com/joefitzgerald/autocomplete-go/issues"
   },
   "dependencies": {
-    "atom-package-deps": "^3.0.6",
-    "underscore-plus": "1.x"
+    "atom-package-deps": "^4.0.1",
+    "lodash": "^4.6.1"
   },
   "devDependencies": {
-    "eslint": "^1.5.0",
-    "babel-eslint": "^4.1.3",
-    "eslint-config-standard": "^4.4.0",
-    "eslint-plugin-standard": "^1.3.1"
+    "eslint": "^2.4.0",
+    "babel-eslint": "^6.0.0-beta.6",
+    "eslint-config-standard": "^5.1.0",
+    "eslint-plugin-standard": "^1.3.2",
+    "eslint-plugin-promise": "^1.1.0"
   },
   "package-deps": [
     "go-config",
@@ -37,12 +38,17 @@
   "consumedServices": {
     "go-config": {
       "versions": {
-        "0.1.0": "consumeGoconfig"
+        "1.0.0": "consumeGoconfig"
       }
     },
     "go-get": {
       "versions": {
         "0.1.0": "consumeGoget"
+      }
+    },
+    "environment": {
+      "versions": {
+        "0.1.0": "consumeEnvironment"
       }
     }
   },
@@ -52,5 +58,73 @@
         "2.0.0": "provide"
       }
     }
+  },
+  "configSchema": {
+    "scopeBlacklist": {
+      "title": "Scope Blacklist",
+      "description": "Suggestions will not be shown when the cursor is inside the following comma-delimited scope(s).",
+      "type": "string",
+      "default": ".source.go .comment",
+      "order": 1
+    },
+    "suppressBuiltinAutocompleteProvider": {
+      "title": "Suppress The Provider Built-In To autocomplete-plus",
+      "description": "Suppress the provider built-in to the autocomplete-plus package when editing .go files.",
+      "type": "boolean",
+      "default": true,
+      "order": 2
+    },
+    "suppressActivationForCharacters": {
+      "title": "Suppress Activation For Characters",
+      "description": "Suggestions will not be provided when you type one of these characters.",
+      "type": "array",
+      "default": [
+        "comma",
+        "newline",
+        "space",
+        "tab",
+        "/",
+        "\\",
+        "(",
+        ")",
+        "\"",
+        "'",
+        ":",
+        ";",
+        "<",
+        ">",
+        "~",
+        "!",
+        "@",
+        "#",
+        "$",
+        "%",
+        "^",
+        "&",
+        "*",
+        "|",
+        "+",
+        "=",
+        "[",
+        "]",
+        "{",
+        "}",
+        "`",
+        "~",
+        "?",
+        "-"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "order": 3
+    }
+  },
+  "standard": {
+    "globals": [
+      "advanceClock",
+      "atom",
+      "waitsForPromise"
+    ]
   }
 }
