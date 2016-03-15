@@ -43,12 +43,7 @@
     },
     "go-get": {
       "versions": {
-        "0.1.0": "consumeGoget"
-      }
-    },
-    "environment": {
-      "versions": {
-        "0.1.0": "consumeEnvironment"
+        "1.0.0": "consumeGoget"
       }
     }
   },
