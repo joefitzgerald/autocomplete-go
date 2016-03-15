@@ -9,7 +9,7 @@
     "autocomplete-plus"
   ],
   "main": "./lib/main",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "repository": "https://github.com/joefitzgerald/autocomplete-go",
   "license": "Apache-2.0",
   "engines": {
