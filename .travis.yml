@@ -1,11 +1,9 @@
-language: objective-c
-
 notifications:
   email:
     on_success: never
     on_failure: change
 
-sudo: required
+sudo: false
 
 os:
   - linux
@@ -19,7 +17,6 @@ go:
 env:
   global:
     - APM_TEST_PACKAGES="environment go-config"
-    - ATOM_ACCESS_TOKEN=da809a6077bb1b0aa7c5623f7b2d5f1fec2faae4
 
   matrix:
     - ATOM_CHANNEL=stable
@@ -29,5 +26,17 @@ script:
   - go get -u github.com/nsf/gocode
   - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
 
+addons:
+  apt:
+    packages:
+    - build-essential
+    - git
+    - libgnome-keyring-dev
+    - fakeroot
+
 git:
   depth: 10
+
+branches:
+  only:
+    - master
