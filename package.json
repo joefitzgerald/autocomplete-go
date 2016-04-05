@@ -59,7 +59,7 @@
       "title": "Scope Blacklist",
       "description": "Suggestions will not be shown when the cursor is inside the following comma-delimited scope(s).",
       "type": "string",
-      "default": ".source.go .comment",
+      "default": ".source.go .comment, .source.go .constant.numeric, .source.go .string.quoted",
       "order": 1
     },
     "suppressBuiltinAutocompleteProvider": {
