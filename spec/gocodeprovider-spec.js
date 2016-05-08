@@ -43,14 +43,13 @@ describe('gocodeprovider', () => {
       spyOn(autocompleteManager, 'displaySuggestions').andCallThrough()
       spyOn(autocompleteManager, 'showSuggestionList').andCallThrough()
       spyOn(autocompleteManager, 'hideSuggestionList').andCallThrough()
-      atom.config.set('autocomplete-go.snippetMode', 'nameAndType')
       atom.config.set('autocomplete-plus.enableAutoActivation', true)
-        // atom.config.set('go-plus.suppressBuiltinAutocompleteProvider', false)
       completionDelay = 100
       atom.config.set('autocomplete-plus.autoActivationDelay', completionDelay)
       completionDelay += 100 // Rendering delay
 
       // autocomplete-go
+      atom.config.set('autocomplete-go.snippetMode', 'nameAndType')
       provider = autocompletegoMain.getProvider()
       spyOn(provider, 'getSuggestions').andCallThrough()
       provider.onDidInsertSuggestion = jasmine.createSpy()
