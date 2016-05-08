@@ -113,6 +113,18 @@
         "type": "string"
       },
       "order": 3
+    },
+    "snippetMode": {
+      "title": "Snippet Mode",
+      "description": "When inserting suggestions for funcs, generate a snippet that includes parenthesis only (none), argument name (name), or argument name and type (nameAndType).",
+      "type": "string",
+      "default": "name",
+      "enum": [
+        "name",
+        "nameAndType",
+        "none"
+      ],
+      "order": 4
     }
   },
   "standard": {
