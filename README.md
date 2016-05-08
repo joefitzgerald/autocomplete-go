@@ -34,3 +34,7 @@ If you have the [`go-get`](https://atom.io/packages/go-get) package installed, t
 * `suppressActivationForCharacters`: Suggestions will not be provided when you type one of the specified characters (default: ``comma, newline, space, tab, /, \, (, ), ", ', :,
 ;, <, >, ~, !, @, #, $, %, ^, &, *, |, +,
 =, [, ], {, }, `, ~, ?, -``)
+* `snippetMode`: Snippets can be generated when inserting the suggestion for a `func`; this option allows you to control what is generated (default: `name`)
+  * `name`: E.g.: `fmt.Println(a)` with `a` selected such that it will be replaced on the first keystroke
+  * `nameAndType`: E.g.: `fmt.Println(a ...interface{})`, with `a ...interface{}` selected such that it will be replaced on the first keystroke
+  * `none`: E.g.: `fmt.Println()`, with the cursor placed between the parenthesis
