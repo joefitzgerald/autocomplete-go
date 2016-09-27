@@ -121,6 +121,20 @@
         "none"
       ],
       "order": 4
+    },
+    "proposeBuiltins": {
+      "title": "Propose Builtins",
+      "description": "Add built-in types, functions and constants to an autocompletion proposals. Default: true.",
+      "type": "boolean",
+      "default": true,
+      "order": 5
+    },
+    "unimportedPackages": {
+      "title": "Unimported Packages",
+      "description": "Provide suggestions for unimported packages. Default: true.",
+      "type": "boolean",
+      "default": true,
+      "order": 6
     }
   },
   "standard": {
