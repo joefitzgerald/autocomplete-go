@@ -22,10 +22,10 @@
   },
   "dependencies": {
     "atom-package-deps": "4.2.0",
-    "lodash": "^4.15.0"
+    "lodash": "^4.16.2"
   },
   "devDependencies": {
-    "standard": "^8.0.0-beta.4"
+    "standard": "^8.2.0"
   },
   "package-deps": [
     "go-config",
@@ -39,7 +39,7 @@
     },
     "go-get": {
       "versions": {
-        "1.0.0": "consumeGoget"
+        "2.0.0": "consumeGoget"
       }
     }
   },
