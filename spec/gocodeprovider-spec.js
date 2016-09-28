@@ -152,7 +152,7 @@ describe('gocodeprovider', () => {
           expect(suggestions.length).toBeGreaterThan(0)
           expect(suggestions[0]).toBeTruthy()
           expect(suggestions[0].displayText).toBe('Print(a ...interface{})')
-          expect(suggestions[0].snippet).toBe('Print(${1:a ...interface{\\}})$0')
+          expect(suggestions[0].snippet).toBe('Print(${1:a ...interface{\\}})$0') // eslint-disable-line no-template-curly-in-string
           expect(suggestions[0].replacementPrefix).toBe('P')
           expect(suggestions[0].type).toBe('function')
           expect(suggestions[0].leftLabel).toBe('n int, err error')
@@ -194,7 +194,7 @@ describe('gocodeprovider', () => {
           expect(suggestions.length).toBeGreaterThan(0)
           expect(suggestions[0]).toBeTruthy()
           expect(suggestions[0].displayText).toBe('Print(a ...interface{})')
-          expect(suggestions[0].snippet).toBe('Print(${1:a})$0')
+          expect(suggestions[0].snippet).toBe('Print(${1:a})$0') // eslint-disable-line no-template-curly-in-string
           expect(suggestions[0].replacementPrefix).toBe('P')
           expect(suggestions[0].type).toBe('function')
           expect(suggestions[0].leftLabel).toBe('n int, err error')
@@ -293,7 +293,7 @@ describe('gocodeprovider', () => {
         expect(suggestions.length).toBeGreaterThan(0)
         expect(suggestions[0]).toBeTruthy()
         expect(suggestions[0].displayText).toBe('Fatal(v ...interface{})')
-        expect(suggestions[0].snippet).toBe('Fatal(${1:v ...interface{\\}})$0')
+        expect(suggestions[0].snippet).toBe('Fatal(${1:v ...interface{\\}})$0') // eslint-disable-line no-template-curly-in-string
         expect(suggestions[0].replacementPrefix).toBe('')
         expect(suggestions[0].type).toBe('function')
         expect(suggestions[0].leftLabel).toBe('')
@@ -337,7 +337,7 @@ describe('gocodeprovider', () => {
         expect(suggestions.length).toBeGreaterThan(0)
         expect(suggestions[0]).toBeTruthy()
         expect(suggestions[0].displayText).toBe('Fatal(v ...interface{})')
-        expect(suggestions[0].snippet).toBe('Fatal(${1:v ...interface{\\}})$0')
+        expect(suggestions[0].snippet).toBe('Fatal(${1:v ...interface{\\}})$0') // eslint-disable-line no-template-curly-in-string
         expect(suggestions[0].replacementPrefix).toBe('')
         expect(suggestions[0].type).toBe('function')
         expect(suggestions[0].leftLabel).toBe('')
@@ -381,7 +381,7 @@ describe('gocodeprovider', () => {
         expect(suggestions.length).toBeGreaterThan(0)
         expect(suggestions[0]).toBeTruthy()
         expect(suggestions[0].displayText).toBe('Fatal(v ...interface{})')
-        expect(suggestions[0].snippet).toBe('Fatal(${1:v ...interface{\\}})$0')
+        expect(suggestions[0].snippet).toBe('Fatal(${1:v ...interface{\\}})$0') // eslint-disable-line no-template-curly-in-string
         expect(suggestions[0].replacementPrefix).toBe('')
         expect(suggestions[0].type).toBe('function')
         expect(suggestions[0].leftLabel).toBe('')
@@ -425,7 +425,7 @@ describe('gocodeprovider', () => {
         expect(suggestions.length).toBeGreaterThan(0)
         expect(suggestions[0]).toBeTruthy()
         expect(suggestions[0].displayText).toBe('Fatal(v ...interface{})')
-        expect(suggestions[0].snippet).toBe('Fatal(${1:v ...interface{\\}})$0')
+        expect(suggestions[0].snippet).toBe('Fatal(${1:v ...interface{\\}})$0') // eslint-disable-line no-template-curly-in-string
         expect(suggestions[0].replacementPrefix).toBe('')
         expect(suggestions[0].type).toBe('function')
         expect(suggestions[0].leftLabel).toBe('')
