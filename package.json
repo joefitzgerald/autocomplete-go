@@ -25,7 +25,7 @@
     "lodash": "^4.16.2"
   },
   "devDependencies": {
-    "standard": "^8.3.0"
+    "standard": "^8.4.0"
   },
   "package-deps": [
     "go-config",
